@@ -12,6 +12,16 @@ internal static class SubscriberConstants
     {
         // Of course we let HTTP 200 pass through
         HttpStatusCode.OK,
+        //...and all the other 2xx status codes
+        HttpStatusCode.Created, //201
+        HttpStatusCode.Accepted, //202
+        HttpStatusCode.NonAuthoritativeInformation, //203
+        HttpStatusCode.NoContent, //204
+        HttpStatusCode.ResetContent, //205
+        HttpStatusCode.PartialContent, //206
+        HttpStatusCode.MultiStatus, //207
+        HttpStatusCode.AlreadyReported, //208
+        HttpStatusCode.IMUsed, //226
 
         // Those cannot be retried based on Event Grid's documentation
         // https://learn.microsoft.com/en-us/azure/event-grid/delivery-and-retry#retry-schedule
