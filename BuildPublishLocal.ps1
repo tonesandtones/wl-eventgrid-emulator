@@ -23,7 +23,7 @@ Process {
         Exec { & dotnet clean -c Release }
         Exec { & dotnet build -c Release }
         Exec { & dotnet test  -c Release --results-directory "$outputDir" --no-restore -l "trx" -l "console;verbosity=detailed" }
-        Exec { & docker build --file .\EventGridEmulator\Dockerfile -t workleap/eventgridemulator:tonesandtones-81 . }
+        Exec { & docker build --file .\EventGridEmulator\Dockerfile -t tonesandtones/eventgridemulator:0.0.1-81 . }
     }
     finally {
         Pop-Location
